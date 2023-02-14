@@ -1,4 +1,5 @@
-const idGenerator = (length = 6) => {
+const generator = {
+   letter :(length = 1) => {
   let result = "";
   let characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -7,6 +8,7 @@ const idGenerator = (length = 6) => {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
   return result;
-};
+}
+}
 
-module.exports = { idGenerator };
+module.exports = generator ;
