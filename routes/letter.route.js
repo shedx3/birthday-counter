@@ -3,6 +3,6 @@ const router = express.Router();
 
 const letterRouter = require("../controller/letter.controller");
 
-router.get("/gen",letterRouter.letter);
+router.post("/gen",letterRouter.letter);
 
 module.exports = router;
