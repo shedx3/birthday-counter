@@ -3,16 +3,7 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      uniqueCaseInsensitive: true,
-      lowercase: true,
-      dropDups: true,
-      trim: true,
-      match: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-    },
+    date: { type: Date, default: new Date() },
   },
   { timestamps: true }
 );
